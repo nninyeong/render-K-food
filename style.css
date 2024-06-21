@@ -46,8 +46,30 @@ ul {
   border-radius: 5px;
   padding: 10px;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   font-family: "LeeSeoyun";
+  transition: transform 0.5s;
+  transform: perspective(800px) rotateY(0deg);
+  transform-style: preserve-3d;
+
+  display: grid;
+}
+
+.menuItem:hover {
+    transform: perspective(800px) rotateY(180deg);
+}
+
+.menuItem > * {
+    grid-area: 1 / 1 / 1 / 1;
+    backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menuName {
+}
+
+.menuDescription {
+    transform: rotateY(180deg);
 }

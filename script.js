@@ -10,8 +10,8 @@ function setMenu() {
     for (let menu of menuItems) {
         let item = `
         <li class="menuItem">
-            <h2>${menu.name}</h2>
-            <p>${menu.description}</p>
+            <h2 class="menuName">${menu.name}</h2>
+            <div class="menuDescription">${menu.description}</div>
         </li>
         `;
         $('#menuList').append(item);
