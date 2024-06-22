@@ -67,9 +67,10 @@ ul {
     justify-content: center;
 }
 
-.menuName {
-}
-
 .menuDescription {
     transform: rotateY(180deg);
+}
+
+.categoryItem {
+  cursor: pointer;
 }
