@@ -19,9 +19,9 @@ function setMenu() {
     }
 }
 
-function filterMenu(selectedItem) {
-    let selectedCategory = selectedItem.textContent;
-    let selectedMenu = menuItems.filter(menu => menu.category === selectedCategory);
+
+function filterMenu() {
+    let selectedMenu = menuItems.filter(menu => menu.category === selectedCategory.textContent);
     if(selectedMenu.length === 0) {
         selectedMenu = menuItems;
     }
@@ -39,5 +39,16 @@ function filterMenu(selectedItem) {
         $('#menuList').append(item);
     }
 }
+
+let selectedCategory = $('#selectedCategory');
+function categoryChange(selectedItem) {
+    $(selectedCategory).removeAttr("id");
+    selectedCategory = selectedItem;
+    $(selectedCategory).attr("id", "selectedCategory");
+
+    filterMenu();
+}
+
+
 
 $(document).ready(setMenu);

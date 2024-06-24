@@ -81,10 +81,18 @@ ul {
   align-items: center;
 
   font-family: "EF_jejudoldam";
+  font-size: 1.1rem;
 }
 
 .categoryItem:hover{
   cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 5px;
+}
+
+#selectedCategory {
+  color: rgb(255, 147, 32);
   text-decoration: underline;
   text-decoration-style: wavy;
   text-underline-offset: 5px;
