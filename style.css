@@ -30,10 +30,6 @@ ul {
   align-items: center;
 }
 
-.menuItem {
-  text-align: center;
-}
-
 #title {
   margin-top: 50px;
   font-family: "EF_jejudoldam";
@@ -42,11 +38,14 @@ ul {
 
 .menuItem {
   height: 100px;
+  width: 300px;
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding: 10px;
   margin-top: 20px;
   font-family: "LeeSeoyun";
+  text-align: center;
+
   transition: transform 0.5s;
   transform: perspective(800px) rotateY(0deg);
   transform-style: preserve-3d;
@@ -71,6 +70,22 @@ ul {
     transform: rotateY(180deg);
 }
 
-.categoryItem {
+.category {
+  width: 300px;
+  height: 40px;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: "EF_jejudoldam";
+}
+
+.categoryItem:hover{
   cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 5px;
 }
